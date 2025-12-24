@@ -1,0 +1,82 @@
+/* CSS Variables */
+:root {
+    --bg-deep: #0f0f0f;
+    --bg-surface: #1a1a1a;
+    --bg-elevated: #242424;
+    --bg-hover: #2d2d2d;
+    
+    --text-primary: #fafafa;
+    --text-secondary: #a0a0a0;
+    --text-muted: #666666;
+    
+    --accent-warm: #e8a87c;
+    --accent-coral: #e27d60;
+    --accent-sage: #85dcb8;
+    --accent-gold: #c38d45;
+    
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-medium: rgba(255, 255, 255, 0.12);
+    
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+    
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    
+    --font-sans: 'DM Sans', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    
+    --sidebar-width: 320px;
+    --header-height: 72px;
+    --footer-height: 88px;
+}
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#root {
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+/* Responsive sidebar width */
+@media (max-width: 1024px) {
+    :root {
+        --sidebar-width: 280px;
+    }
+}
+
+/* Small height screens */
+@media (max-height: 700px) {
+    :root {
+        --header-height: 56px;
+        --footer-height: 64px;
+    }
+}
+
+/* Very small height screens */
+@media (max-height: 550px) {
+    :root {
+        --header-height: 48px;
+    }
+}

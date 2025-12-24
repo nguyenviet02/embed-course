@@ -1,0 +1,180 @@
+/* App Container */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: 
+        radial-gradient(ellipse at 20% 0%, rgba(232, 168, 124, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 100%, rgba(133, 220, 184, 0.05) 0%, transparent 50%),
+        var(--bg-deep);
+}
+
+/* Content Header */
+.content-header {
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 48px;
+    border-bottom: 1px solid var(--border-subtle);
+    flex-shrink: 0;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.breadcrumb-separator {
+    color: var(--text-muted);
+}
+
+.breadcrumb-current {
+    color: var(--accent-warm);
+    font-weight: 500;
+}
+
+/* Content Footer */
+.content-footer {
+    min-height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 48px;
+    border-top: 1px solid var(--border-subtle);
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    flex-shrink: 0;
+    position: sticky;
+    bottom: 0;
+    z-index: 50;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-coral), var(--accent-warm));
+    color: var(--bg-deep);
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 168, 124, 0.3);
+}
+
+.btn-secondary {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--border-medium);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: var(--bg-hover);
+}
+
+.btn-icon {
+    font-size: 1.125rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .content-header {
+        padding: 0 24px;
+        min-height: var(--header-height);
+        height: auto;
+    }
+    
+    .content-footer {
+        padding: 12px 24px;
+        min-height: auto;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.875rem;
+    }
+}
+
+/* Small height screens */
+@media (max-height: 700px) {
+    .content-footer {
+        padding: 10px 48px;
+        min-height: auto;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+/* Very small height screens */
+@media (max-height: 550px) {
+    .content-footer {
+        padding: 8px 24px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.8125rem;
+    }
+}
+
+/* Combined small width and height */
+@media (max-width: 768px) and (max-height: 700px) {
+    .content-footer {
+        padding: 8px 16px;
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-hover);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
