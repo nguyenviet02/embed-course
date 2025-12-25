@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/auth/:path*",
+      "destination": "https://api-beta.aicademy.org/auth/:path*"
+    }
+  ]
+}

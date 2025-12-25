@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { createLocalJWKSet, jwtVerify } from "jose";
 
-const jwksUrl = "https://api-beta.aicademy.org/auth/jwks";
+const jwksUrl = "/api/auth/jwks";
 
 export async function validateJWTString(jwtStr) {
   let jwks;
