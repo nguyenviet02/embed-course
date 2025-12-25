@@ -170,7 +170,6 @@ export function useCourseState(courseData) {
       if (submittedLessons.has(lesson.id)) return;
 
       const lessonResult = buildLessonResult(lessonIndex);
-      console.log("🚀 ~ useCourseState ~ lessonResult:", lessonResult);
       // const signature = new URLSearchParams(window.location.search).get('signature');
 
       // const message = {
