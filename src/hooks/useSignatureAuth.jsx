@@ -89,6 +89,7 @@ const useSignatureAuth = ({ signature }) => {
       try {
         setLoading(true);
         const response = await validateJWTString(signature);
+        console.log("🚀 ~ validateSignature ~ response:", response);
         setMetadata(response?.metadata);
       } catch (err) {
         setError(err);
