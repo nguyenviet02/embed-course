@@ -58,7 +58,7 @@ const useSignatureAuth = ({ signature }) => {
       return;
     }
     const message = {
-      type: "SUBMIT_LESSON",
+      type: "IFRAME_EVENT",
       payload: {
         event: "lesson_completed",
       },
@@ -73,7 +73,7 @@ const useSignatureAuth = ({ signature }) => {
       return;
     }
     const message = {
-      type: "SUBMIT_COURSE",
+      type: "IFRAME_EVENT",
       payload: {
         event: "course_completed",
       },
