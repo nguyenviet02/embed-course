@@ -63,6 +63,7 @@ const useSignatureAuth = ({ signature }) => {
         event: "lesson_completed",
       },
     };
+    console.log("🚀 ~ submitLesson ~ message:", message);
 
     window.postMessage(message, "*");
 
@@ -83,6 +84,7 @@ const useSignatureAuth = ({ signature }) => {
         event: "course_completed",
       },
     };
+    console.log("🚀 ~ submitCourse ~ message:", message);
 
     window.postMessage(message, "*");
 
