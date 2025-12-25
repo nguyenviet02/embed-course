@@ -65,6 +65,11 @@ const useSignatureAuth = ({ signature }) => {
     };
 
     window.postMessage(message, "*");
+
+    const event = new CustomEvent("lessonSubmitted", {
+      detail: message.payload,
+    });
+    window.dispatchEvent(event);
   };
 
   const submitCourse = () => {
@@ -80,6 +85,11 @@ const useSignatureAuth = ({ signature }) => {
     };
 
     window.postMessage(message, "*");
+
+    const event = new CustomEvent("courseSubmitted", {
+      detail: message.payload,
+    });
+    window.dispatchEvent(event);
   };
 
   useEffect(() => {
