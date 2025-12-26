@@ -103,7 +103,6 @@ const useSignatureAuth = ({ signature }: { signature: string }) => {
       try {
         setLoading(true);
         const response = await validateJWTString(signature);
-        console.log("🚀 ~ validateSignature ~ response:", response);
         if (!response?.metadata) {
           throw new Error("Invalid JWT string");
         }
