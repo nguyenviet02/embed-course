@@ -18,16 +18,7 @@ export interface jwksResponse extends JWTPayload {
 export async function validateJWTString(jwtStr: string): Promise<jwksResponse> {
   let jwks;
   try {
-    jwks = await fetch(jwksUrl, {
-      cf: {
-        cacheTtl: 60,
-        cacheTtlByStatus: {
-          "200-299": 3600,
-          "300-599": 0,
-        },
-        cacheKey: jwksUrl,
-      },
-    });
+    jwks = await fetch(jwksUrl);
     if (!jwks.ok) {
       throw new Error();
     }
